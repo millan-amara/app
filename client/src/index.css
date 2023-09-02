@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+  box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f2f4f8;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+
+.loadingSpinnerContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    z-index: 5000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loadingSpinner {
+    width: 64px;
+    height: 64px;
+    border: 8px solid;
+    border-color: slategray transparent slategray transparent;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+a{
+    text-decoration-line: underline;
+    color: orangered;
+}
+
+#loginDiv{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logDiv{
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    padding: 50px 60px 50px 60px;
+    width: 60%;
+}
+
+#logInForm{
+    border-right: 1px solid rgb(109, 106, 106);
+    width: 50%;
+    padding-right: 70px;
+}
+
+#labelDiv, #emailDiv{
+    margin-bottom: 20px;
+}
+
+#passwordDiv{
+    margin-bottom: 10px;
+}
+
+#email, #password, #sName, #logInButton{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    background-color: beige;
+}
+
+#logInButton{
+    background-color: rgb(51, 51, 230);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+}
+
+#passwordLabels{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#forgot{
+    font-size: 12px;
+}
+
+button {
+    outline: none;
+    border: none;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+
+  .flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin-left: 20px;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color: #334155;
+    color: white;
+  }
+  
+  .flip-box-back {
+    background-color: #334155;
+    color: white;
+    transform: rotateY(180deg);
+  }
