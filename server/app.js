@@ -95,7 +95,19 @@ app.use('/language', languageRoutes)
 //         }
 //     );
 // });
-app.use(express.static(path.join(__dirname + "/public")))
+// app.use(express.static(path.join(__dirname + "/public")))
+
+// app.get('/*', function (req, res) {
+//     res.sendFile(path.join(__dirname, '../client/build/index.html'));
+// });
+// app.get('/*', function (req, res) {
+//     res.sendFile(path.join(__dirname, 'build', 'index.html'));
+// });
+
+app.use(express.static(path.join(__dirname + "public")))
+app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404));
