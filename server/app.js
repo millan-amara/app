@@ -85,9 +85,11 @@ app.use((req, res, next) => {
 app.use('/', userRoutes);
 app.use('/language', languageRoutes)
 
+app.use(express.static(path.join(__dirname + "public")))
+
 app.get('/*', function (req, res) {
     res.sendFile(
-        path.join(__dirname, "../client/build/index.html"),
+        path.join(__dirname, 'public', 'index.html'),
         function(err) {
             if (err) {
                 res.status(500).send(err);
@@ -95,7 +97,7 @@ app.get('/*', function (req, res) {
         }
     );
 });
-// app.use(express.static(path.join(__dirname + "/public")))
+
 
 // app.get('/*', function (req, res) {
 //     res.sendFile(path.join(__dirname, '../client/build/index.html'));
