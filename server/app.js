@@ -95,7 +95,7 @@ app.use('/language', languageRoutes)
 //         }
 //     );
 // });
-app.use(express.static(path.join(__dirname + "public")))
+app.use(express.static(path.join(__dirname + "/public")))
 
 app.all('*', (req, res, next) => {
     next(new ExpressError('Page Not Found', 404));
