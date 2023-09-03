@@ -85,8 +85,15 @@ app.use((req, res, next) => {
 app.use('/', userRoutes);
 app.use('/language', languageRoutes)
 
-app.get('/', (req, res) => {
-    res.redirect('/');
+app.get('/*', function (req, res) {
+    res.sendFile(
+        path.join(__dirname, "../client/build/index.html"),
+        function(err) {
+            if (err) {
+                res.status(500).send(err);
+            }
+        }
+    );
 });
 
 app.all('*', (req, res, next) => {
