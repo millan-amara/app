@@ -85,7 +85,7 @@ app.use((req, res, next) => {
 app.use('/', userRoutes);
 app.use('/language', languageRoutes)
 
-app.use(express.static(path.join(__dirname + "public")))
+app.use(express.static(path.join(__dirname + "/public")))
 
 app.get('/*', function (req, res) {
     res.sendFile(
