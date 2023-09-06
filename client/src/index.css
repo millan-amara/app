@@ -165,19 +165,3 @@ button {
     color: white;
     transform: rotateY(180deg);
   }
-
-  /* @keyframes welcome-animation {
-    50%   {color: rgb(59, 204, 134);}
-    75%  {color: rgb(137, 13, 233);}
-    100% {color: rgb(255, 165, 0);}
-}
-
-#welcome {
-  animation-name: welcome-animation;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-} */
-
-#backgroundVideo {
-  z-index: -1
-}
