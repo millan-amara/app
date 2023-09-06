@@ -8,8 +8,8 @@ import { BiSolidDashboard } from "react-icons/bi";
 function Sidebar() {
 
   const menus = [
-    // { key: "1", title: "Dashboard", path:"", icon: <BiSolidDashboard /> },
-    { key: "2", title: "Languages", path:"", icon: <FaLanguage /> },
+    { key: "1", title: "Dashboard", path:"", icon: <BiSolidDashboard /> },
+    { key: "2", title: "Languages", path:"languages", icon: <FaLanguage /> },
     { key: "3", title: "About Me", path:"about", icon: <BsPersonCircle /> },
     { key: "4", title: "Contact Info", path:"contact-info/my", icon: <MdContactEmergency /> },
     // { title: "Skills & Education", path: "skills", icon: <MdSchool />, spacing: false },

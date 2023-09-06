@@ -18,9 +18,9 @@ function App() {
     <>
     <Router>
       <Routes>
-        {/* <Route path='/' element={<PrivateRoute />} >
+        <Route path='/' element={<PrivateRoute />} >
           <Route path='/' element={<Dashboard />} />
-        </Route> */}
+        </Route>
         <Route path='/about' element={<PrivateRoute />} >
           <Route path='/about' element={<About />} />
         </Route>
