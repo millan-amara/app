@@ -91,11 +91,11 @@ if (process.env.NODE_ENV === "production") {
 
     app.get('*', function (req, res) {
         res.sendFile((__dirname, "client", "build", "index.html"),
-            function(err) {
-                if (err) {
-                    res.status(500).send(err);
-                }
-            }
+            // function(err) {
+            //     if (err) {
+            //         res.status(500).send(err);
+            //     }
+            // }
         );
     });
 } else {
